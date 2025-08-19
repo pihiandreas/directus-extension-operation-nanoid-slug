@@ -41,7 +41,7 @@ export default defineOperationApp({
                 {
                         field: 'length',
                         name: 'Length',
-                        type: 'number',
+                        type: 'string',
                         meta: {
                                 width: 'half',
                                 interface: 'input',
