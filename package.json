@@ -1,6 +1,6 @@
 {
-  "name": "@muratgozel/directus-operation-slugify",
-  "description": "Generates a language aware slug from texts.",
+  "name": "directus-extension-operation-nanoid-slug",
+  "description": "Generates nanoid slugs",
   "icon": "extension",
   "version": "v1.1.7",
   "keywords": [
@@ -16,15 +16,11 @@
   "publishConfig": {
     "access": "public"
   },
-  "author": "Murat Gözel <murat@gozel.com.tr>",
+  "author": "Andreas Berg",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/muratgozel/directus-operation-slugify.git"
+    "url": "git+https://github.com/pihiandreas/directus-extension-operation-nanoid-slug.git"
   },
-  "bugs": {
-    "url": "https://github.com/muratgozel/directus-operation-slugify/issues"
-  },
-  "homepage": "https://github.com/muratgozel/directus-operation-slugify#readme",
   "directus:extension": {
     "type": "operation",
     "host": "^10.3.0",
@@ -49,10 +45,6 @@
     "up-dev": "export $(grep -v '^#' .env | xargs -0) && npm run build && rsync -a --exclude='src' --exclude='node_modules' --include='package.json' --include='dist' --include='dist/*' --exclude='*' --delete ./* $EXTENSIONS_DIR/directus-extension-operation-slugify/"
   },
   "license": "MIT",
-  "funding": {
-    "type": "patreon",
-    "url": "https://patreon.com/muratgozel"
-  },
   "devDependencies": {
     "@directus/extensions-sdk": "11.0.9",
     "@types/node": "^20.14.9",
@@ -61,7 +53,6 @@
     "vue": "^3.4.31"
   },
   "dependencies": {
-    "@types/speakingurl": "^13.0.6",
-    "speakingurl": "^14.0.1"
+    "nanoid": "^5.1.5"
   }
 }
